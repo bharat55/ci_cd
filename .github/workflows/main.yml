@@ -11,7 +11,7 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -33,7 +33,7 @@ jobs:
       RAILS_ENV: test
       DATABASE_URL: "postgres://postgres:password@localhost:5432/rails_test"
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
@@ -49,7 +49,7 @@ jobs:
     needs: test # Only deploy if tests pass
     if: github.ref == 'refs/heads/staging' # Only deploy when pushing to the staging branch
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Deploy to Staging
         run: |
           echo "Triggering deployment to staging server..."
