@@ -65,6 +65,6 @@ group :test do
   gem "selenium-webdriver"
 end
 
-gem "rspec-rails", "~> 8.0", groups: [:development, :test]
-gem "rubocop-rails", "~> 2.34", groups: [:development, :test]
-gem "rubocop-performance", "~> 1.26", groups: [:development, :test]
+gem "rspec-rails", "~> 8.0", groups: [ :development, :test ]
+gem "rubocop-rails", "~> 2.34", groups: [ :development, :test ]
+gem "rubocop-performance", "~> 1.26", groups: [ :development, :test ]
